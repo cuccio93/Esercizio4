@@ -56,7 +56,7 @@ $hostname = "localhost";
             <?php
             foreach($tipi_immobile as $tipi_immobile)
             {
-                echo '<li><a href="#" onclik="getImmobili('.$tipi_immobile['nome'].')">'.$tipi_immobile['nome'].'</a></li>';            }
+                echo '<li><a href="#" onclick="getImmobili('.$tipi_immobile['nome'].')">'.$tipi_immobile['nome'].'</a></li>';            }
                 ?>
           </ul>
           </ul>
