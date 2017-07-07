@@ -10,6 +10,20 @@
     $array = [];
 
     foreach($lista_immobili as $immobile){
+
+        $sql2 = "SELECT * FROM wishlist WHERE idimmobili=".$immobile["idimmobili"];
+
+        $statement = $conn->prepare($sql2);
+        $statement->execute();
+
+        $count = $statement->rowCount();
+
+        if($count > 0 ){
+            $controlWishlist = 1;
+        }else{
+            $controlWishlist = 0;
+        }
+
         $obj = (object) array(
             "immagine" => $immobile["immagine"],
             "titolo" => $immobile["titolo"],
@@ -19,6 +33,8 @@
             "data" => $immobile["data"],
             "localita" => $immobile["localita"],
             "provincia" => $immobile["provincia"],
+            "id" => $immobile["idimmobili"],
+            "controlWishlist" => $controlWishlist
         );
 
         array_push($array,$obj);

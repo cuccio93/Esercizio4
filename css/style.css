@@ -1,3 +1,18 @@
 .navbar-brand img{
     width: 15%;
 }
+
+#message{
+    padding: 20px;
+    text-align: center;
+    color:white;
+    background-color:green;
+    position:fixed;
+    width:100%;
+    z-index: 2;
+    top: -60px;
+}
+
+.modal-dialog{
+    width: 80%;
+}
