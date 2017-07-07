@@ -63,8 +63,8 @@ $hostname = "localhost";
           </ul>
         </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
   
 <script src="lib/jquery-3.2.1.min.js"></script>
