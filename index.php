@@ -44,13 +44,8 @@ $hostname = "localhost";
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
       <ul class="nav navbar-nav navbar-right">
+          <li><a href="#" onclick="openWishlist()">Wishlist</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lista offerte <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -66,6 +61,7 @@ $hostname = "localhost";
     </div>
   </div>
 </nav>
+<div class="container">
     <h1 id="titolo"></h1>
     <table  class="table">
         <thead>
@@ -84,7 +80,7 @@ $hostname = "localhost";
         </tobody>
         </tbody>
     </table>
-
+</div>
   
 <script src="lib/jquery-3.2.1.min.js"></script>
 <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
