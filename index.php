@@ -38,7 +38,7 @@ $hostname = "localhost";
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#"><img src="img\logo.ico"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,14 +50,13 @@ $hostname = "localhost";
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <?php
             foreach($tipi_immobile as $tipi_immobile)
             {
-                echo '<li><a href="#">'.$tipi_immobile['nome'].'</a></li>';            }
+                echo '<li><a href="#" onclik="getImmobili('.$tipi_immobile['nome'].')">'.$tipi_immobile['nome'].'</a></li>';            }
                 ?>
           </ul>
           </ul>
@@ -66,6 +65,25 @@ $hostname = "localhost";
     </div>
   </div>
 </nav>
+    <h1 id="titolo"></h1>
+    <table  class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Titolo</th>
+                <th>Prezzo</th>
+                <th>Mq</th>
+                <th>Locali</th>
+                <th>Data annuncio</th>
+                <th>Località</th>
+                <th>Provincia</th>
+            </tr>
+        </thead>
+        <tbody id="immobili">
+        </tobody>
+        </tbody>
+    </table>
+
   
 <script src="lib/jquery-3.2.1.min.js"></script>
 <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
