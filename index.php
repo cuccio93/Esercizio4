@@ -2,11 +2,12 @@
 $hostname = "localhost";
     $dbname = "esercizio4";
     $user = "root";
+    $password = "root";
    
 
     try
         {
-            $db = new PDO ("mysql:host=$hostname;dbname=$dbname;", $user);
+            $db = new PDO ("mysql:host=$hostname;dbname=$dbname;", $user,$password);
         
             $query="SELECT nome FROM tipi_immobili ORDER BY nome";
             $tipi_immobile=$db->query($query);
@@ -56,7 +57,7 @@ $hostname = "localhost";
             <?php
             foreach($tipi_immobile as $tipi_immobile)
             {
-                echo '<li><a href="#" onclik="getImmobili('.$tipi_immobile['nome'].')">'.$tipi_immobile['nome'].'</a></li>';            }
+                echo '<li><a href="#" onclick="getImmobili(\''.$tipi_immobile['nome'].'\')">'.$tipi_immobile['nome'].'</a></li>';            }
                 ?>
           </ul>
           </ul>
