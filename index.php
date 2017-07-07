@@ -1,3 +1,25 @@
+<?php
+$hostname = "localhost";
+    $dbname = "esercizio4";
+    $user = "root";
+   
+
+    try
+        {
+            $db = new PDO ("mysql:host=$hostname;dbname=$dbname;", $user);
+        
+            $query="SELECT nome FROM tipi_immobili ORDER BY nome";
+            $tipi_immobile=$db->query($query);
+        }
+    catch(PDOException $e) 
+        {
+            echo 'Attenzione: '.$e->getMessage();
+        }
+?>
+
+
+
+
 <html>
 <head>
     <meta charset="UTF-8">
