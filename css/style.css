@@ -16,3 +16,7 @@
 .modal-dialog{
     width: 80%;
 }
+
+.table > tbody > tr > td {
+     vertical-align: middle;
+}

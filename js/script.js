@@ -46,7 +46,7 @@ function createRow(immobile,checkPDF){
 
     //CREO I BOTTONI
     if(checkPDF == "si"){
-        var btnPDF = $("<button type='button' class='btn btn-default' onclick='downloadPDF(" + immobile["id"] + ")'>PDF</button>"); 
+        var btnPDF = $("<a href='http://localhost/Corso%20Sida/PHP/Esercizio4/php/create_pdf.php?id=" + immobile["id"] + "' target='_blank'>PDF</a>"); 
     }
     if(immobile["controlWishlist"] == "0"){
         var btnWishlist = $("<button type='button' class='btn btn-default' onclick='addToWishlist(" + immobile["id"] + ")'>Aggiungi alla wishlist</button>");
